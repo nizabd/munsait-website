@@ -1,12 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { Header } from "@/components/Header";
+import { HeroSection } from "@/components/HeroSection";
+import { RegistrationForm } from "@/components/RegistrationForm";
+import { WhyRemoteMonitoring } from "@/components/WhyRemoteMonitoring";
+import { HowItWorks } from "@/components/HowItWorks";
+import { PlatformFeatures } from "@/components/PlatformFeatures";
+import { PrivacyEthics } from "@/components/PrivacyEthics";
+import { WhoWeAre } from "@/components/WhoWeAre";
+import { FinalCTA } from "@/components/FinalCTA";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+
+  const handleRegisterClick = () => {
+    setIsRegistrationOpen(true);
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header onRegisterClick={handleRegisterClick} />
+      
+      <main className="pt-16">
+        <HeroSection onRegisterClick={handleRegisterClick} />
+        <WhyRemoteMonitoring />
+        <HowItWorks />
+        <PlatformFeatures />
+        <PrivacyEthics />
+        <WhoWeAre />
+        <FinalCTA onRegisterClick={handleRegisterClick} />
+      </main>
+
+      <Footer />
+
+      <RegistrationForm 
+        isOpen={isRegistrationOpen}
+        onClose={() => setIsRegistrationOpen(false)}
+      />
     </div>
   );
 };
