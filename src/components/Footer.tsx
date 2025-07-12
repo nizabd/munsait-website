@@ -8,10 +8,10 @@ export const Footer = () => {
           {/* Logo and Tagline */}
           <div className="space-y-4">
             <div className="text-2xl font-bold text-primary">
-              Moonset
+              Munsait
             </div>
             <p className="text-muted-foreground">
-              Moonset is a digital health initiative built for long-term care providers.
+              Munsait is a digital health initiative built for long-term care providers.
             </p>
           </div>
 
@@ -22,7 +22,7 @@ export const Footer = () => {
               <a href="#privacy" className="block text-muted-foreground hover:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <a href="mailto:contact@moonset.health" className="block text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:contact@munsait.health" className="block text-muted-foreground hover:text-primary transition-colors">
                 Contact Us
               </a>
             </div>
@@ -47,7 +47,7 @@ export const Footer = () => {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} Moonset. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Munsait. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -24,7 +24,7 @@ export const Header = ({ onRegisterClick }: HeaderProps) => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="text-2xl font-bold text-primary">
-              Moonset
+              Munsait
             </div>
           </div>
 

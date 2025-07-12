@@ -80,7 +80,7 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
             <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
               <Check className="w-8 h-8 text-secondary-foreground" />
             </div>
-            <h3 className="text-xl font-semibold mb-2">Welcome to Moonset!</h3>
+            <h3 className="text-xl font-semibold mb-2">Welcome to Munsait!</h3>
             <p className="text-muted-foreground">
               Thank you for joining our waitlist. We'll be in touch soon with next steps.
             </p>
@@ -96,7 +96,7 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
         <DialogHeader>
           <DialogTitle className="text-2xl">Register Your Facility</DialogTitle>
           <DialogDescription>
-            Join the waitlist to get early access to Moonset's voice biomarker platform.
+            Join the waitlist to get early access to Munsait's voice biomarker platform.
           </DialogDescription>
         </DialogHeader>
 
@@ -214,7 +214,7 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
           </div>
 
           <Button type="submit" className="w-full" variant="hero">
-            Join the Moonset Waitlist
+            Join the Munsait Waitlist
           </Button>
         </form>
       </DialogContent>
