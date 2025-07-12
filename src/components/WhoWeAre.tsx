@@ -4,7 +4,7 @@ export const WhoWeAre = () => {
   const highlights = [
     {
       icon: Cpu,
-      title: "Built on OpenAI & DALL·E Technology",
+      title: "Advanced AI Technology",
       description: "Leveraging cutting-edge AI models for superior voice analysis and insights"
     },
     {
