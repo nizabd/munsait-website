@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -11,8 +12,9 @@ export const Header = ({ onRegisterClick }: HeaderProps) => {
 
   const navigation = [
     { name: "How It Works", href: "#how-it-works" },
-    { name: "Why Remote Monitoring", href: "#why-remote-monitoring" },
+    { name: "Why Voice?", href: "#why-voice" },
     { name: "Features", href: "#features" },
+    { name: "Provider Value", href: "#provider-value" },
     { name: "Who We Are", href: "#who-we-are" },
     { name: "Contact", href: "#contact" },
   ];
@@ -44,7 +46,7 @@ export const Header = ({ onRegisterClick }: HeaderProps) => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center">
             <Button variant="register" onClick={onRegisterClick}>
-              Register Facility
+              Join Waitlist
             </Button>
           </div>
 
@@ -83,7 +85,7 @@ export const Header = ({ onRegisterClick }: HeaderProps) => {
                     setIsMenuOpen(false);
                   }}
                 >
-                  Register Facility
+                  Join Waitlist
                 </Button>
               </div>
             </div>

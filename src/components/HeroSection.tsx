@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Brain, Mic, TrendingUp } from "lucide-react";
+import { Brain, Mic, TrendingUp, Users } from "lucide-react";
 
 interface HeroSectionProps {
   onRegisterClick: () => void;
@@ -21,13 +22,14 @@ export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Modernize
-                <span className="block text-primary">Chronic Care</span>
-                <span className="block text-secondary">Monitoring</span>
+                Your Patient's Voice
+                <span className="block text-primary">Can Speak</span>
+                <span className="block text-secondary">Volumes</span>
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-2xl">
-                Use voice to remotely monitor disease progression with real-time, objective insights.
+                AI-powered voice journaling and biomarker analysis that supports remote monitoring, 
+                symptom tracking, and chronic disease management for healthcare providers.
               </p>
             </div>
 
@@ -38,7 +40,7 @@ export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
                 onClick={onRegisterClick}
                 className="text-lg px-8 py-4"
               >
-                Register Your Facility
+                Join the Waitlist
               </Button>
               <Button 
                 variant="outline" 
@@ -46,7 +48,7 @@ export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
                 className="text-lg px-8 py-4"
                 onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Learn More
+                Partner With Us
               </Button>
             </div>
 
@@ -54,15 +56,15 @@ export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
             <div className="flex items-center gap-6 pt-4">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Brain className="w-5 h-5 text-primary" />
-                <span>AI-Powered</span>
+                <span>AI-Powered Analysis</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mic className="w-5 h-5 text-secondary" />
                 <span>Voice Biomarkers</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <TrendingUp className="w-5 h-5 text-primary" />
-                <span>Real-time Insights</span>
+                <Users className="w-5 h-5 text-primary" />
+                <span>Provider-Focused</span>
               </div>
             </div>
           </div>
@@ -70,41 +72,43 @@ export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
           {/* Hero Illustration */}
           <div className="relative animate-scale-in">
             <div className="relative bg-card rounded-2xl p-8 shadow-medical">
-              {/* Voice Waveform Animation */}
+              {/* Voice Analysis Dashboard */}
               <div className="space-y-4 mb-6">
-                <h3 className="text-lg font-semibold text-foreground">Voice Analysis Dashboard</h3>
-                <div className="space-y-2">
-                  {[...Array(5)].map((_, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <div className="flex items-center gap-1">
-                        {[...Array(12)].map((_, j) => (
-                          <div
-                            key={j}
-                            className="w-1 bg-gradient-hero rounded-full animate-pulse-medical"
-                            style={{
-                              height: `${Math.random() * 20 + 4}px`,
-                              animationDelay: `${(i * 12 + j) * 100}ms`
-                            }}
+                <h3 className="text-lg font-semibold text-foreground">Provider Dashboard</h3>
+                <div className="space-y-3">
+                  {[
+                    { label: 'Emotional Wellness', value: 85, color: 'bg-secondary' },
+                    { label: 'Fatigue Detection', value: 72, color: 'bg-primary' },
+                    { label: 'Speech Clarity', value: 91, color: 'bg-secondary' },
+                    { label: 'Cognitive Health', value: 88, color: 'bg-primary' }
+                  ].map((metric, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="flex-1">
+                        <div className="flex justify-between text-sm mb-1">
+                          <span className="text-muted-foreground">{metric.label}</span>
+                          <span className="font-medium">{metric.value}%</span>
+                        </div>
+                        <div className="w-full bg-accent rounded-full h-2">
+                          <div 
+                            className={`${metric.color} h-2 rounded-full transition-all duration-1000`}
+                            style={{ width: `${metric.value}%`, animationDelay: `${i * 300}ms` }}
                           ></div>
-                        ))}
-                      </div>
-                      <div className="text-sm text-muted-foreground">
-                        {['Tremor Detection', 'Respiratory Pattern', 'Speech Clarity', 'Fatigue Level', 'Overall Health'][i]}
+                        </div>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Mock Dashboard */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-accent rounded-lg p-4">
-                  <div className="text-2xl font-bold text-primary">85%</div>
-                  <div className="text-sm text-muted-foreground">Voice Clarity</div>
+              {/* Voice Journaling Preview */}
+              <div className="bg-accent rounded-lg p-4">
+                <div className="text-sm font-medium text-foreground mb-2">Latest Voice Journal</div>
+                <div className="text-xs text-muted-foreground">
+                  "Today I'm feeling more energetic. My morning routine went smoothly..."
                 </div>
-                <div className="bg-accent rounded-lg p-4">
-                  <div className="text-2xl font-bold text-secondary">Normal</div>
-                  <div className="text-sm text-muted-foreground">Respiratory</div>
+                <div className="flex items-center gap-2 mt-2">
+                  <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
+                  <span className="text-xs text-muted-foreground">Analyzed for emotional patterns</span>
                 </div>
               </div>
             </div>

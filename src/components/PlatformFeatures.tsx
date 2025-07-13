@@ -1,8 +1,9 @@
+
 import { 
   Heart, 
   BarChart3, 
-  CheckCircle, 
   FileText, 
+  Shield,
   Smartphone,
   Activity
 } from "lucide-react";
@@ -11,33 +12,33 @@ export const PlatformFeatures = () => {
   const features = [
     {
       icon: Heart,
-      title: "Voice Biomarker Detection",
-      description: "Advanced analysis of tremor, fatigue, respiratory distress, and other vocal indicators"
-    },
-    {
-      icon: BarChart3,
-      title: "Visual Dashboards",
-      description: "Intuitive trend tracking with intelligent alerts and comprehensive health timelines"
-    },
-    {
-      icon: CheckCircle,
-      title: "Automated Check-ins",
-      description: "Reduce staff workload while increasing patient compliance and engagement"
-    },
-    {
-      icon: FileText,
-      title: "Custom Reports",
-      description: "Generate and share detailed health reports across your entire care team"
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile-Friendly",
-      description: "Works seamlessly on any smartphone - no additional hardware required"
+      title: "Voice Journaling",
+      description: "Patients express themselves naturally through guided or free-form voice entries, creating rich emotional and health data."
     },
     {
       icon: Activity,
-      title: "Real-time Monitoring",
-      description: "Continuous health insights with immediate notifications for critical changes"
+      title: "Symptom & Emotional Tracking",
+      description: "Monitor changes in mood, energy levels, pain, and other symptoms through voice pattern analysis over time."
+    },
+    {
+      icon: BarChart3,
+      title: "Passive Voice Monitoring",
+      description: "Capture health insights during routine conversations without requiring structured assessments."
+    },
+    {
+      icon: FileText,
+      title: "Provider Dashboards & Reports",
+      description: "Access comprehensive patient insights through intuitive dashboards with trend analysis and automated reporting."
+    },
+    {
+      icon: Shield,
+      title: "Secure Data Capture",
+      description: "HIPAA-compliant platform ensures patient privacy while providing powerful analytics for healthcare providers."
+    },
+    {
+      icon: Smartphone,
+      title: "Non-Invasive Technology",
+      description: "Works with any smartphone or device - no additional hardware or complex setup required for patients."
     }
   ];
 
@@ -46,10 +47,10 @@ export const PlatformFeatures = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Built for Long-Term Care Teams
+            Comprehensive Voice Health Platform
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive features designed to integrate seamlessly into your care workflow
+            Everything healthcare providers need to leverage voice biomarkers for better patient care
           </p>
         </div>
 

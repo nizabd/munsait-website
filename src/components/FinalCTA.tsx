@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 
 interface FinalCTAProps {
@@ -17,11 +18,12 @@ export const FinalCTA = ({ onRegisterClick }: FinalCTAProps) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center space-y-8 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-            Ready to transform your chronic care approach?
+            Ready to revolutionize patient care with voice?
           </h2>
           
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Join early pilots and shape the future of voice-based health monitoring.
+            Join forward-thinking healthcare providers who are already using voice biomarkers 
+            to deliver better care and improve patient outcomes.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -31,7 +33,7 @@ export const FinalCTA = ({ onRegisterClick }: FinalCTAProps) => {
               onClick={onRegisterClick}
               className="text-lg px-8 py-4 bg-white text-primary hover:bg-white/90 shadow-glow"
             >
-              Register Your Facility
+              Join the Waitlist
             </Button>
             <Button 
               variant="outline" 
@@ -39,7 +41,18 @@ export const FinalCTA = ({ onRegisterClick }: FinalCTAProps) => {
               className="text-lg px-8 py-4 border-white text-white hover:bg-white/10"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Contact Us
+              Partner With Us
+            </Button>
+          </div>
+
+          {/* Additional CTA options */}
+          <div className="pt-4">
+            <Button 
+              variant="ghost" 
+              className="text-white/80 hover:text-white underline-offset-4 hover:underline"
+              onClick={() => window.open('mailto:voice@munsait.health', '_blank')}
+            >
+              Donate Your Voice to Research
             </Button>
           </div>
 
@@ -47,7 +60,7 @@ export const FinalCTA = ({ onRegisterClick }: FinalCTAProps) => {
           <div className="flex flex-wrap justify-center items-center gap-8 pt-8 text-white/80">
             <div className="text-sm">✓ HIPAA Compliant</div>
             <div className="text-sm">✓ GDPR Compliant</div>
-            <div className="text-sm">✓ No Hardware Required</div>
+            <div className="text-sm">✓ Provider-Focused</div>
             <div className="text-sm">✓ Easy Integration</div>
           </div>
         </div>

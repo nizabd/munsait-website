@@ -1,26 +1,22 @@
-import { Mic, Brain, Monitor, Activity } from "lucide-react";
+
+import { Mic, Brain, Monitor } from "lucide-react";
 
 export const HowItWorks = () => {
   const steps = [
     {
       icon: Mic,
-      title: "Patients record 30-second voice samples weekly",
-      description: "Simple voice recordings using any smartphone - no special hardware required"
+      title: "Patients speak naturally",
+      description: "Through voice journaling or simple check-ins, patients share their thoughts and feelings in their own words, anytime, anywhere."
     },
     {
       icon: Brain,
-      title: "AI analyzes vocal biomarkers",
-      description: "Advanced algorithms detect subtle changes in voice patterns indicative of health status"
+      title: "AI analyzes vocal features",
+      description: "Our advanced algorithms detect subtle changes in voice patterns that indicate fatigue, stress, emotional state, and cognitive changes."
     },
     {
       icon: Monitor,
-      title: "Doctor dashboard updates with trends & alerts",
-      description: "Real-time visualization of patient health trends with intelligent alert system"
-    },
-    {
-      icon: Activity,
-      title: "Teams act based on insights",
-      description: "Make informed care decisions with objective data between visits"
+      title: "Providers receive actionable insights",
+      description: "Get longitudinal data and trend analysis through intuitive dashboards, enabling better remote monitoring and care decisions."
     }
   ];
 
@@ -29,15 +25,15 @@ export const HowItWorks = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            How It Works
+            How It Works for Providers
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Simple, seamless integration into your existing care workflow
+            A simple three-step process that transforms patient voices into actionable healthcare insights
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -46,10 +42,10 @@ export const HowItWorks = () => {
               >
                 {/* Connection Line (desktop only) */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary to-secondary opacity-30 transform translate-x-4"></div>
+                  <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary to-secondary opacity-30 transform translate-x-4 z-0"></div>
                 )}
 
-                <div className="bg-card rounded-xl p-6 shadow-card hover:shadow-medical transition-all duration-300 transform hover:-translate-y-1">
+                <div className="bg-card rounded-xl p-6 shadow-card hover:shadow-medical transition-all duration-300 transform hover:-translate-y-1 relative z-10">
                   <div className="space-y-4">
                     <div className="relative">
                       <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center shadow-medical">
@@ -60,11 +56,11 @@ export const HowItWorks = () => {
                       </div>
                     </div>
                     
-                    <h3 className="text-lg font-semibold text-foreground leading-tight">
+                    <h3 className="text-xl font-semibold text-foreground leading-tight">
                       {step.title}
                     </h3>
                     
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground">
                       {step.description}
                     </p>
                   </div>

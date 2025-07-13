@@ -1,10 +1,12 @@
+
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { RegistrationForm } from "@/components/RegistrationForm";
-import { WhyRemoteMonitoring } from "@/components/WhyRemoteMonitoring";
 import { HowItWorks } from "@/components/HowItWorks";
+import { WhyVoice } from "@/components/WhyVoice";
 import { PlatformFeatures } from "@/components/PlatformFeatures";
+import { ProviderValue } from "@/components/ProviderValue";
 import { PrivacyEthics } from "@/components/PrivacyEthics";
 import { WhoWeAre } from "@/components/WhoWeAre";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -23,9 +25,10 @@ const Index = () => {
       
       <main className="pt-16">
         <HeroSection onRegisterClick={handleRegisterClick} />
-        <WhyRemoteMonitoring />
         <HowItWorks />
+        <WhyVoice />
         <PlatformFeatures />
+        <ProviderValue />
         <PrivacyEthics />
         <WhoWeAre />
         <FinalCTA onRegisterClick={handleRegisterClick} />
