@@ -11,17 +11,17 @@ export const ProviderValue = () => {
     {
       icon: Users,
       title: "Better Remote Follow-Up",
-      description: "Stay connected with patients between visits through continuous voice monitoring and regular check-ins."
+      description: "Stay connected with patients between visits through continuous voice monitoring and regular check-ins. Assign care goals and send tailored reminders to promote better adherence."
     },
     {
       icon: FileText,
       title: "Lower Documentation Burden",
-      description: "Automated analysis and reporting reduce administrative work while providing richer patient insights."
+      description: "Automated analysis and reporting reduce administrative work while providing richer patient insights and care plan tracking."
     },
     {
       icon: TrendingUp,
       title: "Scalable Longitudinal Insights",
-      description: "Track patient progress over weeks, months, and years with objective data that scales across your practice."
+      description: "Track patient progress over weeks, months, and years with objective data that scales across your practice. Monitor treatment adherence and goal completion in real-time."
     }
   ];
 

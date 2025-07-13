@@ -6,6 +6,7 @@ import { RegistrationForm } from "@/components/RegistrationForm";
 import { HowItWorks } from "@/components/HowItWorks";
 import { WhyVoice } from "@/components/WhyVoice";
 import { PlatformFeatures } from "@/components/PlatformFeatures";
+import { PatientAdherence } from "@/components/PatientAdherence";
 import { ProviderValue } from "@/components/ProviderValue";
 import { PrivacyEthics } from "@/components/PrivacyEthics";
 import { WhoWeAre } from "@/components/WhoWeAre";
@@ -28,6 +29,7 @@ const Index = () => {
         <HowItWorks />
         <WhyVoice />
         <PlatformFeatures />
+        <PatientAdherence />
         <ProviderValue />
         <PrivacyEthics />
         <WhoWeAre />

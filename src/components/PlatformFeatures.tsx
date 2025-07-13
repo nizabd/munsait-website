@@ -5,7 +5,8 @@ import {
   FileText, 
   Shield,
   Smartphone,
-  Activity
+  Activity,
+  Target
 } from "lucide-react";
 
 export const PlatformFeatures = () => {
@@ -19,6 +20,11 @@ export const PlatformFeatures = () => {
       icon: Activity,
       title: "Symptom & Emotional Tracking",
       description: "Monitor changes in mood, energy levels, pain, and other symptoms through voice pattern analysis over time."
+    },
+    {
+      icon: Target,
+      title: "Plan-of-Care Support",
+      description: "Providers can assign goals or recommendations, and Munsait helps patients stay on track with personalized reminders and voice-based prompts aligned with their care plan."
     },
     {
       icon: BarChart3,
