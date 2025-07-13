@@ -22,14 +22,15 @@ export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Your Patient's Voice
-                <span className="block text-primary">Can Speak</span>
-                <span className="block text-secondary">Volumes</span>
+                Revolutionize Chronic Care
+                <span className="block text-primary">with Voice-Driven</span>
+                <span className="block text-secondary">Insights</span>
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-2xl">
-                AI-powered voice journaling and biomarker analysis that supports remote monitoring, 
-                symptom tracking, and chronic disease management for healthcare providers.
+                Munsait turns everyday speech into clinical intelligence — helping you track symptoms, 
+                engage patients, and improve care for chronic conditions like respiratory, neurological, 
+                metabolic, and cognitive disorders.
               </p>
             </div>
 
@@ -63,8 +64,8 @@ export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
                 <span>Voice Biomarkers</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Users className="w-5 h-5 text-primary" />
-                <span>Provider-Focused</span>
+                <TrendingUp className="w-5 h-5 text-primary" />
+                <span>Clinical Intelligence</span>
               </div>
             </div>
           </div>

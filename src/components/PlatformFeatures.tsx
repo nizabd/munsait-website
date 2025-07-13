@@ -18,33 +18,33 @@ export const PlatformFeatures = () => {
     },
     {
       icon: Activity,
-      title: "Symptom & Emotional Tracking",
-      description: "Monitor changes in mood, energy levels, pain, and other symptoms through voice pattern analysis over time."
+      title: "Symptom & Emotion Tracking",
+      description: "Monitor changes across respiratory, neurological, metabolic, and cognitive domains through voice pattern analysis over time."
     },
     {
       icon: Target,
-      title: "Plan-of-Care Support",
-      description: "Providers can assign goals or recommendations, and Munsait helps patients stay on track with personalized reminders and voice-based prompts aligned with their care plan."
+      title: "Plan-of-Care Reminders",
+      description: "Promote adherence with personalized daily support. Providers can assign goals and Munsait helps patients stay on track with voice-based prompts aligned with their care plan."
     },
     {
       icon: BarChart3,
-      title: "Passive Voice Monitoring",
-      description: "Capture health insights during routine conversations without requiring structured assessments."
+      title: "Objective Health Signals",
+      description: "Track fatigue, cognition, mood, and speech clarity through passive voice monitoring during routine conversations."
     },
     {
       icon: FileText,
-      title: "Provider Dashboards & Reports",
-      description: "Access comprehensive patient insights through intuitive dashboards with trend analysis and automated reporting."
+      title: "Provider Dashboard",
+      description: "Visualize trends, export summaries, and reduce no-show rates with comprehensive patient insights and automated reporting."
     },
     {
       icon: Shield,
-      title: "Secure Data Capture",
-      description: "HIPAA-compliant platform ensures patient privacy while providing powerful analytics for healthcare providers."
+      title: "Secure & Passive",
+      description: "Non-invasive insights from natural speech. HIPAA-compliant platform ensures patient privacy while providing powerful analytics."
     },
     {
       icon: Smartphone,
-      title: "Non-Invasive Technology",
-      description: "Works with any smartphone or device - no additional hardware or complex setup required for patients."
+      title: "No Additional Hardware",
+      description: "Works with any smartphone or device — no complex setup required for patients, seamless integration for providers."
     }
   ];
 

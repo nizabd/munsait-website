@@ -44,7 +44,12 @@ export const PatientAdherence = () => {
             
             <div className="text-center space-y-4">
               <p className="text-muted-foreground">
-                With Munsait, providers can assign personalized care goals that translate into daily voice-based reflections and actionable reminders, helping patients build healthy habits and stay compliant with their care plan.
+                Munsait supports patients with chronic conditions like <strong>respiratory diseases, neurological disorders, 
+                cognitive recovery, metabolic conditions, and mental health</strong> by helping them reflect, stay engaged, 
+                and follow care plans consistently.
+              </p>
+              <p className="text-sm text-muted-foreground italic">
+                Examples: Asthma management, Parkinson's monitoring, diabetes care, stroke recovery, depression support, and more.
               </p>
             </div>
           </div>

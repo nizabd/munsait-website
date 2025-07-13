@@ -15,8 +15,8 @@ export const HowItWorks = () => {
     },
     {
       icon: Monitor,
-      title: "Providers receive insights and assign care goals",
-      description: "Get longitudinal data and trend analysis through intuitive dashboards, while assigning personalized care goals. Munsait keeps patients engaged with voice-based feedback and timely reminders."
+      title: "Providers receive continuous, objective insights",
+      description: "Get longitudinal data and trend analysis through intuitive dashboards, while assigning personalized care plans. Patients receive voice-driven prompts and reminders — improving engagement, adherence, and outcomes."
     }
   ];
 
