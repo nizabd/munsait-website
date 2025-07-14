@@ -11,11 +11,6 @@ export const WhoWeAre = () => {
       icon: Users,
       title: "Cross-disciplinary Expert Team",
       description: "Data scientists, clinicians, and engineers working together for healthcare innovation"
-    },
-    {
-      icon: MapPin,
-      title: "Global Presence",
-      description: "Based in Dubai & Casablanca, serving healthcare providers worldwide"
     }
   ];
 
@@ -31,7 +26,7 @@ export const WhoWeAre = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {highlights.map((highlight, index) => (
             <div
               key={index}

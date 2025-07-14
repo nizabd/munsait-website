@@ -6,7 +6,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -24,15 +23,8 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
     contactName: "",
     email: "",
     country: "",
-    city: "",
-    pathologies: {
-      parkinsons: false,
-      copd: false,
-      diabetes: false,
-      other: false,
-    },
-    chronicPatients: "",
-    staffCount: "",
+    specialties: [] as string[],
+    suggestions: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -48,15 +40,8 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
         contactName: "",
         email: "",
         country: "",
-        city: "",
-        pathologies: {
-          parkinsons: false,
-          copd: false,
-          diabetes: false,
-          other: false,
-        },
-        chronicPatients: "",
-        staffCount: "",
+        specialties: [] as string[],
+        suggestions: "",
       });
     }, 2000);
   };
@@ -65,10 +50,12 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handlePathologyChange = (pathology: string, checked: boolean) => {
+  const handleSpecialtyChange = (specialty: string, checked: boolean) => {
     setFormData(prev => ({
       ...prev,
-      pathologies: { ...prev.pathologies, [pathology]: checked }
+      specialties: checked
+        ? [...prev.specialties, specialty]
+        : prev.specialties.filter(s => s !== specialty)
     }));
   };
 
@@ -94,31 +81,26 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl">Register Your Facility</DialogTitle>
-          <DialogDescription>
-            Join the waitlist to get early access to Munsait's voice biomarker platform.
-          </DialogDescription>
+          <DialogTitle className="text-2xl">Join the waitlist to get early access to Munsait's remote patient monitoring.</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="facilityName">Facility Name *</Label>
+              <Label htmlFor="facilityName">Facility Name</Label>
               <Input
                 id="facilityName"
                 type="text"
-                required
                 value={formData.facilityName}
                 onChange={(e) => handleInputChange("facilityName", e.target.value)}
                 placeholder="Enter facility name"
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="contactName">Contact Name *</Label>
+              <Label htmlFor="contactName">Contact Name</Label>
               <Input
                 id="contactName"
                 type="text"
-                required
                 value={formData.contactName}
                 onChange={(e) => handleInputChange("contactName", e.target.value)}
                 placeholder="Enter your name"
@@ -127,90 +109,73 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email">Work Email *</Label>
+            <Label htmlFor="email">Email address *</Label>
             <Input
               id="email"
               type="email"
               required
               value={formData.email}
               onChange={(e) => handleInputChange("email", e.target.value)}
-              placeholder="Enter work email"
+              placeholder="Enter email address"
             />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="country">Country *</Label>
-              <Input
-                id="country"
-                type="text"
-                required
-                value={formData.country}
-                onChange={(e) => handleInputChange("country", e.target.value)}
-                placeholder="Enter country"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="city">City *</Label>
-              <Input
-                id="city"
-                type="text"
-                required
-                value={formData.city}
-                onChange={(e) => handleInputChange("city", e.target.value)}
-                placeholder="Enter city"
-              />
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="country">Country</Label>
+            <Input
+              id="country"
+              type="text"
+              value={formData.country}
+              onChange={(e) => handleInputChange("country", e.target.value)}
+              placeholder="Enter country"
+            />
           </div>
 
           <div className="space-y-3">
-            <Label>Pathologies Managed *</Label>
+            <Label>Specialties</Label>
             <div className="grid grid-cols-2 gap-3">
               {[
-                { key: "parkinsons", label: "Parkinson's" },
-                { key: "copd", label: "COPD" },
-                { key: "diabetes", label: "Diabetes" },
-                { key: "other", label: "Other" },
-              ].map((pathology) => (
-                <div key={pathology.key} className="flex items-center space-x-2">
+                "ENT",
+                "Neurologist",
+                "Pulmonologist",
+                "Cardiologist",
+                "Endocrinologist",
+                "Primary care",
+                "Family Medicine",
+                "Paediatrician",
+                "Oncology",
+                "Psychiatry",
+                "Psychologist",
+                "Speech Pathologist",
+                "Physical Therapist",
+                "Occupational Therapist",
+                "Other"
+              ].map((specialty) => (
+                <div key={specialty} className="flex items-center space-x-2">
                   <Checkbox
-                    id={pathology.key}
-                    checked={formData.pathologies[pathology.key as keyof typeof formData.pathologies]}
-                    onCheckedChange={(checked) => 
-                      handlePathologyChange(pathology.key, checked as boolean)
+                    id={specialty}
+                    checked={formData.specialties.includes(specialty)}
+                    onCheckedChange={(checked) =>
+                      handleSpecialtyChange(specialty, checked as boolean)
                     }
                   />
-                  <Label htmlFor={pathology.key} className="text-sm">
-                    {pathology.label}
+                  <Label htmlFor={specialty} className="text-sm">
+                    {specialty}
                   </Label>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="chronicPatients">Estimated Chronic Patients *</Label>
-              <Input
-                id="chronicPatients"
-                type="number"
-                required
-                value={formData.chronicPatients}
-                onChange={(e) => handleInputChange("chronicPatients", e.target.value)}
-                placeholder="Number of patients"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="staffCount">Number of Staff *</Label>
-              <Input
-                id="staffCount"
-                type="number"
-                required
-                value={formData.staffCount}
-                onChange={(e) => handleInputChange("staffCount", e.target.value)}
-                placeholder="Number of staff"
-              />
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="suggestions">Suggestions</Label>
+            <textarea
+              id="suggestions"
+              className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              value={formData.suggestions}
+              onChange={(e) => handleInputChange("suggestions", e.target.value)}
+              placeholder="What are the main features you want to see? How do you plan to use Munsait?"
+            />
           </div>
 
           <Button type="submit" className="w-full" variant="hero">

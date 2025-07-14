@@ -6,25 +6,25 @@ export const HowItWorks = () => {
     {
       icon: UserCheck,
       title: "Providers assign personalized care goals",
-      description: "Set treatment objectives tailored to each patient's needs — from managing respiratory symptoms or emotional wellness to cognitive rehabilitation or metabolic support.",
-      patientBenefit: "Care becomes clearer and more actionable for the patient — one step at a time."
+      description: "Set treatment objectives tailored to each patient's needs: from managing respiratory symptoms or emotional wellness to cognitive rehabilitation or metabolic support.",
+      patientBenefit: "Care becomes clearer and more actionable for the patient, one step at a time."
     },
     {
       icon: Mic,
       title: "Patients engage through natural voice",
       description: "Patients check in through guided voice prompts or ambient journaling. No apps to navigate. Just speak.",
-      patientBenefit: "Empathetic and frictionless — feels like support, not a task."
+      patientBenefit: "Empathetic and frictionless. Feels like support, not a task."
     },
     {
       icon: Brain,
       title: "AI detects subtle health changes",
-      description: "Munsait analyzes vocal patterns to flag early signs of fatigue, emotional strain, cognitive shifts, or speech changes — based on condition-specific markers.",
+      description: "Munsait analyzes vocal patterns to flag early signs of fatigue, emotional strain, cognitive shifts, or speech changes based on condition-specific markers.",
       patientBenefit: "Issues are caught earlier, enabling more timely and targeted support."
     },
     {
       icon: BarChart3,
       title: "Providers track progress and adherence",
-      description: "Get a longitudinal view of patient status and behavior between visits. Track engagement, flag drop-offs, and adjust care plans as needed — all in one dashboard.",
+      description: "Get a longitudinal view of patient status and behavior between visits. Track engagement, flag drop-offs, and adjust care plans as needed. All in one dashboard.",
       patientBenefit: "A connected care experience that adapts in real time, supporting better outcomes and fewer crises."
     }
   ];
@@ -54,8 +54,8 @@ export const HowItWorks = () => {
                   <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-primary to-secondary opacity-30 transform translate-x-4 z-0"></div>
                 )}
 
-                <div className="bg-card rounded-xl p-6 shadow-card hover:shadow-medical transition-all duration-300 transform hover:-translate-y-1 relative z-10">
-                  <div className="space-y-4">
+                <div className="bg-card rounded-xl p-6 shadow-card hover:shadow-medical transition-all duration-300 transform hover:-translate-y-1 relative z-10 h-full flex flex-col">
+                  <div className="space-y-4 flex-1 flex flex-col">
                     <div className="relative">
                       <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center shadow-medical">
                         <step.icon className="w-8 h-8 text-white" />
@@ -73,7 +73,7 @@ export const HowItWorks = () => {
                       {step.description}
                     </p>
                     
-                    <div className="border-l-2 border-secondary pl-3">
+                    <div className="border-l-2 border-secondary pl-3 mt-auto">
                       <p className="text-xs text-secondary font-medium">
                         🔹 Patient benefit: {step.patientBenefit}
                       </p>
@@ -91,14 +91,14 @@ export const HowItWorks = () => {
                 Why It Matters
               </h3>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-                Munsait empowers providers to deliver care that is proactive, personalized, and precise — by turning voice into a powerful, non-invasive health signal.
+                Munsait empowers providers to deliver care that is proactive, personalized, and precise by turning voice into a powerful, non-invasive health signal.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="space-y-3">
                   <h4 className="text-lg font-semibold text-primary">Proactive</h4>
                   <p className="text-sm text-muted-foreground">
-                    Detects early shifts in vocal patterns that may reflect changes in condition — enabling timely, preventive action.
+                    Detects early shifts in vocal patterns that may reflect changes in condition, enabling timely, preventive action.
                   </p>
                 </div>
                 <div className="space-y-3">
@@ -110,14 +110,14 @@ export const HowItWorks = () => {
                 <div className="space-y-3">
                   <h4 className="text-lg font-semibold text-primary">Precise</h4>
                   <p className="text-sm text-muted-foreground">
-                    Analyzes objective vocal features like tone, rhythm, and energy to surface signals beyond what's reported — supporting data-informed care.
+                    Analyzes objective vocal features like tone, rhythm, and energy to surface signals beyond what's reported. Supporting data-informed care.
                   </p>
                 </div>
               </div>
               
               <div className="space-y-3 mt-8">
                 <p className="text-muted-foreground">
-                  These insights help providers better understand how patients are doing between visits — improving engagement, adherence, and outcomes.
+                  These insights help providers better understand how patients are doing between visits. Improving engagement, adherence, and outcomes.
                 </p>
                 <p className="text-primary font-semibold text-lg">
                   Smarter signals. More responsive care. Real impact.

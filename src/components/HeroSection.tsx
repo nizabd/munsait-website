@@ -1,14 +1,17 @@
 
 import { Button } from "@/components/ui/button";
 import { Brain, Mic, TrendingUp, Users } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface HeroSectionProps {
   onRegisterClick: () => void;
 }
 
 export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
+    const { t, isRTL } = useLanguage();
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-subtle overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full animate-pulse-medical"></div>
@@ -21,51 +24,49 @@ export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Revolutionize Chronic Care
-                <span className="block text-primary">with Voice-Driven</span>
-                <span className="block text-secondary">Insights</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                {t.hero.titlePart1}
+                <span className="block text-primary">{t.hero.titlePart2}</span>
+                <span className="block text-secondary">{t.hero.titlePart3}</span>
               </h1>
               
-              <p className="text-xl text-muted-foreground max-w-2xl">
-                Munsait turns everyday speech into clinical intelligence — helping you track symptoms, 
-                engage patients, and improve care for chronic conditions like respiratory, neurological, 
-                metabolic, and cognitive disorders.
+              <p className="text-xl text-white max-w-2xl">
+                {t.hero.description}
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                variant="hero" 
+              <Button
+                variant="hero"
                 size="lg"
                 onClick={onRegisterClick}
                 className="text-lg px-8 py-4"
               >
-                Join the Waitlist
+                {t.hero.joinWaitlist}
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="lg"
                 className="text-lg px-8 py-4"
-                onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => window.open('mailto:info@munsait.com?subject=Partnership Inquiry', '_blank')}
               >
-                Partner With Us
+                {t.hero.partnerWithUs}
               </Button>
             </div>
 
             {/* Trust indicators */}
             <div className="flex items-center gap-6 pt-4">
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Brain className="w-5 h-5 text-primary" />
-                <span>AI-Powered Analysis</span>
+              <div className="flex items-center gap-2 text-sm text-white">
+                <Brain className="w-5 h-5 text-secondary" />
+                <span>{t.hero.aiPowered}</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2 text-sm text-white">
                 <Mic className="w-5 h-5 text-secondary" />
-                <span>Voice Biomarkers</span>
+                <span>{t.hero.voiceBiomarkers}</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <TrendingUp className="w-5 h-5 text-primary" />
-                <span>Clinical Intelligence</span>
+              <div className="flex items-center gap-2 text-sm text-white">
+                <TrendingUp className="w-5 h-5 text-secondary" />
+                <span>{t.hero.clinicalIntelligence}</span>
               </div>
             </div>
           </div>

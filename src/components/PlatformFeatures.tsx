@@ -44,7 +44,7 @@ export const PlatformFeatures = () => {
     {
       icon: Smartphone,
       title: "No Additional Hardware",
-      description: "Works with any smartphone or device — no complex setup required for patients, seamless integration for providers."
+      description: "Works with any smartphone or device. No complex setup required for patients, seamless integration for providers."
     }
   ];
 

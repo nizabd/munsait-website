@@ -36,10 +36,10 @@ export const FinalCTA = ({ onRegisterClick }: FinalCTAProps) => {
               Join the Waitlist
             </Button>
             <Button 
-              variant="outline" 
+              variant="secondary"
               size="lg"
-              className="text-lg px-8 py-4 border-white text-white hover:bg-white/10"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-lg px-8 py-4 bg-white text-primary hover:bg-white/90"
+              onClick={() => window.open('mailto:info@munsait.com?subject=Partnership Inquiry', '_blank')}
             >
               Partner With Us
             </Button>
@@ -48,11 +48,12 @@ export const FinalCTA = ({ onRegisterClick }: FinalCTAProps) => {
           {/* Additional CTA options */}
           <div className="pt-4">
             <Button 
-              variant="ghost" 
-              className="text-white/80 hover:text-white underline-offset-4 hover:underline"
-              onClick={() => window.open('mailto:voice@munsait.health', '_blank')}
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 py-4 border-secondary bg-secondary/20 text-white hover:bg-secondary hover:border-secondary font-semibold"
+              onClick={() => window.open('https://donate-your-voice-for-health.up.railway.app/', '_blank')}
             >
-              Donate Your Voice to Research
+              🎤 Donate Your Voice to Research
             </Button>
           </div>
 

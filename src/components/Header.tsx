@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface HeaderProps {
   onRegisterClick: () => void;
@@ -9,14 +11,15 @@ interface HeaderProps {
 
 export const Header = ({ onRegisterClick }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navigation = [
-    { name: "How It Works", href: "#how-it-works" },
-    { name: "Why Voice?", href: "#why-voice" },
-    { name: "Features", href: "#features" },
-    { name: "Provider Value", href: "#provider-value" },
-    { name: "Who We Are", href: "#who-we-are" },
-    { name: "Contact", href: "#contact" },
+    { name: t.header.howItWorks, href: "#how-it-works" },
+    { name: t.header.whyVoice, href: "#why-voice" },
+    { name: t.header.features, href: "#features" },
+    { name: t.header.providerValue, href: "#provider-value" },
+    { name: t.header.whoWeAre, href: "#who-we-are" },
+    { name: t.header.contact, href: "#contact" },
   ];
 
   return (
@@ -42,6 +45,12 @@ export const Header = ({ onRegisterClick }: HeaderProps) => {
               </a>
             ))}
           </nav>
+
+          {/* Language Switcher */}
+          <div className="hidden md:flex">
+            <LanguageSwitcher />
+          </div>
+
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center">

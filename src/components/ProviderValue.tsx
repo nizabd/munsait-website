@@ -26,7 +26,7 @@ export const ProviderValue = () => {
     {
       icon: FileText,
       title: "Visibility Between Appointments",
-      description: "Monitor patient progress continuously when it matters most — during daily life outside the clinical setting."
+      description: "Monitor patient progress continuously when it matters most, during daily life outside the clinical setting."
     },
     {
       icon: TrendingUp,
@@ -36,14 +36,14 @@ export const ProviderValue = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="provider-value" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Why Providers Choose Munsait
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Munsait delivers a powerful new layer of patient insight — without increasing clinical workload
+            Munsait delivers a powerful new layer of patient insight, without increasing clinical workload
           </p>
           <p className="text-lg text-muted-foreground font-medium">
             This is not just remote monitoring. It's remote understanding.
@@ -80,7 +80,7 @@ export const ProviderValue = () => {
               <div className="text-sm text-muted-foreground">Better care plan compliance</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl font-bold text-secondary">60%</div>
+              <div className="text-3xl font-bold text-secondary">40%</div>
               <div className="text-sm text-muted-foreground">Reduction in no-show rates</div>
             </div>
             <div className="space-y-2">

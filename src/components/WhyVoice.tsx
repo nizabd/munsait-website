@@ -10,8 +10,8 @@ export const WhyVoice = () => {
     },
     {
       icon: Brain,
-      title: "Cognitive changes are detectable",
-      description: "Subtle shifts in speech patterns can reveal early signs of cognitive decline, memory issues, or neurological changes."
+      title: "Subtle changes are detectable",
+      description: "Subtle shifts in voice patterns can reveal early signs of cognitive decline, memory issues, or neurological changes."
     },
     {
       icon: Activity,
@@ -21,12 +21,12 @@ export const WhyVoice = () => {
     {
       icon: Mic,
       title: "Non-invasive and natural",
-      description: "Voice analysis requires no physical contact, special equipment, or disruption to daily routines - just natural speech."
+      description: "Voice analysis requires no physical contact, special equipment, or disruption to daily routines. Just natural speech."
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-subtle">
+    <section id="why-voice" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">

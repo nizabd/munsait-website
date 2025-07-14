@@ -10,9 +10,6 @@ export const Footer = () => {
             <div className="text-2xl font-bold text-primary">
               Munsait
             </div>
-            <p className="text-muted-foreground">
-              Munsait is a digital health initiative built for long-term care providers.
-            </p>
           </div>
 
           {/* Links */}
@@ -22,7 +19,7 @@ export const Footer = () => {
               <a href="#privacy" className="block text-muted-foreground hover:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <a href="mailto:contact@munsait.health" className="block text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:info@munsait.com?subject=General Inquiry" className="block text-muted-foreground hover:text-primary transition-colors">
                 Contact Us
               </a>
             </div>
