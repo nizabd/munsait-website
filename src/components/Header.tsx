@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { MunsaitLogo } from "./MunsaitLogo";
 
 interface HeaderProps {
   onRegisterClick: () => void;
@@ -28,9 +29,7 @@ export const Header = ({ onRegisterClick }: HeaderProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="text-2xl font-bold text-primary">
-              Munsait
-            </div>
+            <MunsaitLogo size="md" />
           </div>
 
           {/* Desktop Navigation */}

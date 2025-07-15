@@ -1,4 +1,5 @@
 import { Linkedin } from "lucide-react";
+import { MunsaitLogo } from "./MunsaitLogo";
 
 export const Footer = () => {
   return (
@@ -7,9 +8,7 @@ export const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Logo and Tagline */}
           <div className="space-y-4">
-            <div className="text-2xl font-bold text-primary">
-              Munsait
-            </div>
+            <MunsaitLogo size="lg" />
           </div>
 
           {/* Links */}
@@ -30,7 +29,9 @@ export const Footer = () => {
             <h3 className="font-semibold text-foreground">Connect</h3>
             <div className="flex items-center gap-4">
               <a 
-                href="#" 
+                href="https://www.linkedin.com/company/munsait/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary-light transition-colors"
                 aria-label="LinkedIn"
               >
