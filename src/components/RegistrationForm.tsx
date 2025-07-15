@@ -28,16 +28,30 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
+  console.log("1. handleSubmit started");
   e.preventDefault();
 
-  console.log("Form submitted with data:", formData);
+  console.log("2. Form submitted with data:", formData);
 
   if (!formData.email) {
-    console.error("Email is required!");
+    console.error("3. Email is required!");
     return;
   }
 
+  console.log("4. Email validation passed");
+
   try {
+    console.log("5. About to send to Formspree...");
+    console.log("6. Formspree URL:", 'https://formspree.io/f/movlqqrz');
+    console.log("7. Data being sent:", {
+      facilityName: formData.facilityName,
+      contactName: formData.contactName,
+      email: formData.email,
+      country: formData.country,
+      specialties: formData.specialties.join(', '),
+      suggestions: formData.suggestions
+    });
+
     const response = await fetch('https://formspree.io/f/movlqqrz', {
       method: 'POST',
       headers: {
@@ -53,10 +67,14 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
       })
     });
 
-    console.log("Response status:", response.status);
+    console.log("8. Response received!");
+    console.log("9. Response status:", response.status);
+
+    const responseText = await response.text();
+    console.log("10. Response text:", responseText);
 
     if (response.ok) {
-      console.log("SUCCESS! Form submitted to Formspree!");
+      console.log("11. SUCCESS! Form submitted!");
       setIsSubmitted(true);
 
       setTimeout(() => {
@@ -72,10 +90,10 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
         });
       }, 2000);
     } else {
-      console.error("Form submission failed with status:", response.status);
+      console.error("12. Form submission failed");
     }
   } catch (error) {
-    console.error("Error submitting form:", error);
+    console.error("13. Error caught:", error);
   }
 };
 
