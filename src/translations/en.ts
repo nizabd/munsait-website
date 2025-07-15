@@ -14,9 +14,9 @@ export const en = {
   hero: {
     //title: "Revolutionize Chronic care with voice biomarker AI",
     titlePart1: "Revolutionize",
-    titlePart2: "Chronic care with",
-    titlePart3: "voice biomarker AI",
-    description: "Munsait is the first Remote Patient Monitoring app in the Arab world that utilizes voice biomarkers to enhance clinical intelligence. We help healthcare providers track symptoms, engage patients, and improve care for chronic health conditions.",
+    titlePart2: "Chronic Care with",
+    titlePart3: "Voice Biomarkers AI",
+    description: "Munsait is the first remote patient monitoring app in the Arab world that utilizes voice biomarkers to enhance clinical intelligence. We help healthcare providers track symptoms, engage patients, and improve care for chronic health conditions.",
     joinWaitlist: "Join the Waitlist",
     partnerWithUs: "Partner With Us",
     aiPowered: "AI-Powered Analysis",
