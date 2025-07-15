@@ -25,7 +25,7 @@ export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 {t.hero.titlePart1}
-                <span className="block text-primary">{t.hero.titlePart2}</span>
+                <span className="block text-white">{t.hero.titlePart2}</span>
                 <span className="block text-secondary">{t.hero.titlePart3}</span>
               </h1>
               
