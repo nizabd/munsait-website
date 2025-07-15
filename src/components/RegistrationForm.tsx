@@ -27,24 +27,57 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
     suggestions: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would integrate with your backend/Mailchimp/Airtable
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      onClose();
-      setFormData({
-        facilityName: "",
-        contactName: "",
-        email: "",
-        country: "",
-        specialties: [] as string[],
-        suggestions: "",
-      });
-    }, 2000);
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  console.log("Form submitted with data:", formData);
+
+  if (!formData.email) {
+    console.error("Email is required!");
+    return;
+  }
+
+  try {
+    const response = await fetch('https://formspree.io/f/movlqqrz', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        facilityName: formData.facilityName,
+        contactName: formData.contactName,
+        email: formData.email,
+        country: formData.country,
+        specialties: formData.specialties.join(', '),
+        suggestions: formData.suggestions
+      })
+    });
+
+    console.log("Response status:", response.status);
+
+    if (response.ok) {
+      console.log("SUCCESS! Form submitted to Formspree!");
+      setIsSubmitted(true);
+
+      setTimeout(() => {
+        setIsSubmitted(false);
+        onClose();
+        setFormData({
+          facilityName: "",
+          contactName: "",
+          email: "",
+          country: "",
+          specialties: [] as string[],
+          suggestions: "",
+        });
+      }, 2000);
+    } else {
+      console.error("Form submission failed with status:", response.status);
+    }
+  } catch (error) {
+    console.error("Error submitting form:", error);
+  }
+};
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
