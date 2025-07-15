@@ -28,74 +28,60 @@ export const RegistrationForm = ({ isOpen, onClose }: RegistrationFormProps) => 
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
-  console.log("1. handleSubmit started");
-  e.preventDefault();
+    e.preventDefault();
 
-  console.log("2. Form submitted with data:", formData);
+    // This should be VERY obvious if the new code is deployed
+    console.log("🚀 NEW CODE IS RUNNING! FORMSPREE VERSION!");
+    console.log("Form submitted:", formData);
 
-  if (!formData.email) {
-    console.error("3. Email is required!");
-    return;
-  }
-
-  console.log("4. Email validation passed");
-
-  try {
-    console.log("5. About to send to Formspree...");
-    console.log("6. Formspree URL:", 'https://formspree.io/f/movlqqrz');
-    console.log("7. Data being sent:", {
-      facilityName: formData.facilityName,
-      contactName: formData.contactName,
-      email: formData.email,
-      country: formData.country,
-      specialties: formData.specialties.join(', '),
-      suggestions: formData.suggestions
-    });
-
-    const response = await fetch('https://formspree.io/f/movlqqrz', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        facilityName: formData.facilityName,
-        contactName: formData.contactName,
-        email: formData.email,
-        country: formData.country,
-        specialties: formData.specialties.join(', '),
-        suggestions: formData.suggestions
-      })
-    });
-
-    console.log("8. Response received!");
-    console.log("9. Response status:", response.status);
-
-    const responseText = await response.text();
-    console.log("10. Response text:", responseText);
-
-    if (response.ok) {
-      console.log("11. SUCCESS! Form submitted!");
-      setIsSubmitted(true);
-
-      setTimeout(() => {
-        setIsSubmitted(false);
-        onClose();
-        setFormData({
-          facilityName: "",
-          contactName: "",
-          email: "",
-          country: "",
-          specialties: [] as string[],
-          suggestions: "",
-        });
-      }, 2000);
-    } else {
-      console.error("12. Form submission failed");
+    if (!formData.email) {
+      console.error("Email is required!");
+      return;
     }
-  } catch (error) {
-    console.error("13. Error caught:", error);
-  }
-};
+
+    try {
+      console.log("Sending to Formspree...");
+
+      const response = await fetch('https://formspree.io/f/movlqqrz', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          facilityName: formData.facilityName,
+          contactName: formData.contactName,
+          email: formData.email,
+          country: formData.country,
+          specialties: formData.specialties.join(', '),
+          suggestions: formData.suggestions
+        })
+      });
+
+      console.log("Formspree response status:", response.status);
+
+      if (response.ok) {
+        console.log("SUCCESS! Form submitted to Formspree!");
+        setIsSubmitted(true);
+
+        setTimeout(() => {
+          setIsSubmitted(false);
+          onClose();
+          setFormData({
+            facilityName: "",
+            contactName: "",
+            email: "",
+            country: "",
+            specialties: [] as string[],
+            suggestions: "",
+          });
+        }, 2000);
+      } else {
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
