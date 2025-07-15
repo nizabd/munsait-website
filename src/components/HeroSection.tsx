@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Brain, Mic, TrendingUp, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -71,49 +70,14 @@ export const HeroSection = ({ onRegisterClick }: HeroSectionProps) => {
             </div>
           </div>
 
-          {/* Hero Illustration */}
+          {/* Hero Illustration - Dashboard Screenshot */}
           <div className="relative animate-scale-in">
-            <div className="relative bg-card rounded-2xl p-8 shadow-medical">
-              {/* Voice Analysis Dashboard */}
-              <div className="space-y-4 mb-6">
-                <h3 className="text-lg font-semibold text-foreground">Provider Dashboard</h3>
-                <div className="space-y-3">
-                  {[
-                    { label: 'Emotional Wellness', value: 85, color: 'bg-secondary' },
-                    { label: 'Fatigue Detection', value: 72, color: 'bg-primary' },
-                    { label: 'Speech Clarity', value: 91, color: 'bg-secondary' },
-                    { label: 'Cognitive Health', value: 88, color: 'bg-primary' }
-                  ].map((metric, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div className="flex-1">
-                        <div className="flex justify-between text-sm mb-1">
-                          <span className="text-muted-foreground">{metric.label}</span>
-                          <span className="font-medium">{metric.value}%</span>
-                        </div>
-                        <div className="w-full bg-accent rounded-full h-2">
-                          <div 
-                            className={`${metric.color} h-2 rounded-full transition-all duration-1000`}
-                            style={{ width: `${metric.value}%`, animationDelay: `${i * 300}ms` }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Voice Journaling Preview */}
-              <div className="bg-accent rounded-lg p-4">
-                <div className="text-sm font-medium text-foreground mb-2">Latest Voice Journal</div>
-                <div className="text-xs text-muted-foreground">
-                  "Today I'm feeling more energetic. My morning routine went smoothly..."
-                </div>
-                <div className="flex items-center gap-2 mt-2">
-                  <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
-                  <span className="text-xs text-muted-foreground">Analyzed for emotional patterns</span>
-                </div>
-              </div>
-            </div>
+            <img
+              src="/dashboard-screenshot.png"
+              alt="Munsait Provider Dashboard - Real-time voice biomarker analytics and patient monitoring"
+              className="w-full h-auto"
+              loading="eager"
+            />
           </div>
         </div>
       </div>
