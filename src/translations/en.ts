@@ -48,7 +48,7 @@ export const en = {
       description: "Get a longitudinal view of patient status and behavior between visits. Track engagement, flag drop-offs, and adjust care plans as needed in one dashboard.",
       benefit: "A connected care experience that adapts in real time, supporting better outcomes and fewer crises."
     },
-    whyItMatters: "Why It Matters",
+    whyItMatters: "Our Mission",
     whyDescription: "Munsait empowers providers to deliver care that is proactive, personalized, and precise by turning voice into a powerful, non-invasive health signal.",
     proactive: "Proactive",
     proactiveDesc: "Detects early shifts in vocal patterns that may reflect changes in condition, enabling timely, preventive action.",
@@ -62,7 +62,7 @@ export const en = {
 
   // Why Voice
   whyVoice: {
-    title: "Why Voice Biomarkers Matter",
+    title: "Why Voice Biomarkers",
     subtitle: "Your voice is a powerful window into your overall health - both physical and emotional",
     quote: "Voice biomarkers can detect health changes days or weeks before traditional methods, providing early intervention opportunities that improve patient outcomes.",
     emotional: "Voice reflects emotional health",

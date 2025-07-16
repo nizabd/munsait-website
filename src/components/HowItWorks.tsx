@@ -85,38 +85,38 @@ export const HowItWorks = () => {
           </div>
           
           {/* Updated Why it matters section */}
-          <div className="text-center bg-card rounded-2xl p-8 shadow-card">
+          <div className="text-center bg-gradient-hero rounded-2xl p-8 shadow-card">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-foreground">
-                Why It Matters
+              <h3 className="text-2xl font-bold text-secondary">
+                Our Mission
               </h3>
-              <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+              <p className="text-lg text-white max-w-4xl mx-auto">
                 Munsait empowers providers to deliver care that is proactive, personalized, and precise by turning voice into a powerful, non-invasive health signal.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="space-y-3">
-                  <h4 className="text-lg font-semibold text-primary">Proactive</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <h4 className="text-lg font-semibold text-secondary">Proactive</h4>
+                  <p className="text-sm text-white">
                     Detects early shifts in vocal patterns that may reflect changes in condition, enabling timely, preventive action.
                   </p>
                 </div>
                 <div className="space-y-3">
-                  <h4 className="text-lg font-semibold text-primary">Personalized</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <h4 className="text-lg font-semibold text-secondary">Personalized</h4>
+                  <p className="text-sm text-white">
                     Translates each patient's care plan into voice-based prompts and reminders tailored to their needs and goals.
                   </p>
                 </div>
                 <div className="space-y-3">
-                  <h4 className="text-lg font-semibold text-primary">Precise</h4>
-                  <p className="text-sm text-muted-foreground">
+                  <h4 className="text-lg font-semibold text-secondary">Precise</h4>
+                  <p className="text-sm text-white">
                     Analyzes objective vocal features like tone, rhythm, and energy to surface signals beyond what's reported. Supporting data-informed care.
                   </p>
                 </div>
               </div>
               
               <div className="space-y-3 mt-8">
-                <p className="text-muted-foreground">
+                <p className="text-white">
                   These insights help providers better understand how patients are doing between visits. Improving engagement, adherence, and outcomes.
                 </p>
                 <p className="text-primary font-semibold text-lg">

@@ -30,7 +30,7 @@ const Index = () => {
           <HeroSection onRegisterClick={handleRegisterClick} />
           <HowItWorks />
           <WhyVoice />
-          <PlatformFeatures />
+
           <ResearchSection />
           <PatientAdherence />
           <ProviderValue />
