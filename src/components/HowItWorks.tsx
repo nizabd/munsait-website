@@ -96,19 +96,19 @@ export const HowItWorks = () => {
               
               <div className="grid md:grid-cols-3 gap-6 mt-8">
                 <div className="space-y-3">
-                  <h4 className="text-lg font-semibold text-secondary">Proactive</h4>
+                  <h4 className="text-lg font-semibold text-white">Proactive</h4>
                   <p className="text-sm text-white">
                     Detects early shifts in vocal patterns that may reflect changes in condition, enabling timely, preventive action.
                   </p>
                 </div>
                 <div className="space-y-3">
-                  <h4 className="text-lg font-semibold text-secondary">Personalized</h4>
+                  <h4 className="text-lg font-semibold text-white">Personalized</h4>
                   <p className="text-sm text-white">
                     Translates each patient's care plan into voice-based prompts and reminders tailored to their needs and goals.
                   </p>
                 </div>
                 <div className="space-y-3">
-                  <h4 className="text-lg font-semibold text-secondary">Precise</h4>
+                  <h4 className="text-lg font-semibold text-white">Precise</h4>
                   <p className="text-sm text-white">
                     Analyzes objective vocal features like tone, rhythm, and energy to surface signals beyond what's reported. Supporting data-informed care.
                   </p>
@@ -119,7 +119,7 @@ export const HowItWorks = () => {
                 <p className="text-white">
                   These insights help providers better understand how patients are doing between visits. Improving engagement, adherence, and outcomes.
                 </p>
-                <p className="text-primary font-semibold text-lg">
+                <p className="text-white font-semibold text-lg">
                   Smarter signals. More responsive care. Real impact.
                 </p>
               </div>
